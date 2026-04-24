@@ -23,6 +23,8 @@ client.on("messageCreate", async (message) => {
   // ── Greetings (any channel) ──────────────────────────────────────────────
   if (msg.startsWith("gm")) return message.reply("GM, time to work 😊");
   if (msg.startsWith("gn")) return message.reply("GN, Jan lupa turu !!! ☠️");
+  if (msg.startsWith("scam")) return message.reply("DIHINA HINA SAYA DIAM, DIRENDAH RENDAHKAN SAYA JUGA DIAM, T-TAPI HARI INI DI JOGJA SAYA SAMPAIKAN SAY AKAN LAWAN ☠️");
+  if (msg.startsWith("skem")) return message.reply("DIHINA HINA SAYA DIAM, DIRENDAH RENDAHKAN SAYA JUGA DIAM, T-TAPI HARI INI DI JOGJA SAYA SAMPAIKAN SAY AKAN LAWAN ☠️");
 
   // ── !suhu command (any channel) ──────────────────────────────────────────
   if (msg.startsWith("!suhu")) {
