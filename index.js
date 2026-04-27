@@ -89,18 +89,27 @@ client.on("messageCreate", async (message) => {
     const totalIdr  = totalUsd * usdToIdr;
 
     const embed = new EmbedBuilder()
-      .setColor("#00ff9d")
-      .setTitle(`💰 Konversi ${symbol.toUpperCase()}`)
-      .setDescription(`Konversi **${amount} ${symbol.toUpperCase()} → IDR**`)
-      .setThumbnail(coin.large || coin.thumb)
-      .addFields(
-        { name: "USD", value: `$${totalUsd.toFixed(2)}`,                                  inline: true },
-        { name: "IDR", value: `Rp ${Math.round(totalIdr).toLocaleString("id-ID")}`,       inline: true }
-      )
-      .setFooter({ text: "Crypto Price Bot" })
-      .setTimestamp();
+  .setColor("#00ff9d")
+  .setTitle(`💰 Konversi ${symbol.toUpperCase()}`)
+  .setDescription(`Konversi **${amount} ${symbol.toUpperCase()} → IDR**`)
+  .setThumbnail(coin.large || coin.thumb)
+  .addFields(
+    { name: "USD", value: `$${totalUsd.toFixed(2)}`, inline: true },
+    { name: "IDR", value: `Rp ${Math.round(totalIdr).toLocaleString("id-ID")}`, inline: true }
+  )
+  .setFooter({ text: "Crypto Price Bot" })
+  .setTimestamp();
 
-    return message.reply({ embeds: [embed] });
+// ⭐ TAMBAHKAN DI SINI
+if (symbol.toLowerCase() === "bsb") {
+  embed.addFields({
+    name: "😂 Pesan Bot",
+    value: "Cek harga BSB mulu mas, Move on! 🤣"
+  });
+}
+
+// reply tetap normal
+return message.reply({ embeds: [embed] });
   } catch (err) {
     console.error("Crypto lookup error:", err.message);
     return message.reply("❌ Gagal mengambil data harga.");
