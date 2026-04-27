@@ -103,7 +103,7 @@ client.on("messageCreate", async (message) => {
 // ⭐ TAMBAHKAN DI SINI
 if (symbol.toLowerCase() === "bsb") {
   embed.addFields({
-    name: "😂 Pesan Bot",
+    name: "😂",
     value: "Cek harga BSB mulu mas, Move on! 🤣"
   });
 }
