@@ -23,7 +23,7 @@ client.on("messageCreate", async (message) => {
   // ── Greetings (any channel) ──────────────────────────────────────────────
   if (msg.startsWith("gm")) return message.reply("GM, time to work 😊");
   if (msg.startsWith("gn")) return message.reply("GN, Jan lupa turu !!! ☠️");
-    const audio = new AttachmentBuilder("./DIAM.mp3");
+    const audio = new AttachmentBuilder("./sayasampaikan.mp3");
   if (msg.startsWith("diam")) return message.reply({
        content: "😡 !!!",
     files: [audio]
