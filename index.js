@@ -25,7 +25,7 @@ client.on("messageCreate", async (message) => {
   if (msg.startsWith("gn")) return message.reply("GN, Jan lupa turu !!! ☠️");
     const audio = new AttachmentBuilder("./DIAM.mp3");
   if (msg.startsWith("diam")) return message.reply({
-       content: "DIAM !!!",
+       content: "😡 !!!",
     files: [audio]
   });
 
