@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { Client, GatewayIntentBits, EmbedBuilder } = require("discord.js");
+const { Client, GatewayIntentBits, EmbedBuilder, AttachmentBuilder } = require("discord.js");
 const axios = require("axios");
 
 const client = new Client({
@@ -23,9 +23,11 @@ client.on("messageCreate", async (message) => {
   // ── Greetings (any channel) ──────────────────────────────────────────────
   if (msg.startsWith("gm")) return message.reply("GM, time to work 😊");
   if (msg.startsWith("gn")) return message.reply("GN, Jan lupa turu !!! ☠️");
-  if (msg.startsWith("scam")) return message.reply("# DIHINA HINA SAYA DIAM, DIRENDAH RENDAHKAN SAYA JUGA DIAM, T-TAPI HARI INI DI JOGJA SAYA SAMPAIKAN SAYA AKAN LAWAN ☠️");
-  if (msg.startsWith("skem")) return message.reply("# DIHINA HINA SAYA DIAM, DIRENDAH RENDAHKAN SAYA JUGA DIAM, T-TAPI HARI INI DI JOGJA SAYA SAMPAIKAN SAYA AKAN LAWAN ☠️");
-  if (msg.startsWith("sekem")) return message.reply("# DIHINA HINA SAYA DIAM, DIRENDAH RENDAHKAN SAYA JUGA DIAM, T-TAPI HARI INI DI JOGJA SAYA SAMPAIKAN SAYA AKAN LAWAN ☠️");
+    const audio = new AttachmentBuilder("./DIAM.mp3");
+  if (msg.startsWith("diam")) return message.reply({
+       content: "DIAM !!!",
+    files: [audio]
+  });
 
   // ── !suhu command (any channel) ──────────────────────────────────────────
   if (msg.startsWith("!suhu")) {
